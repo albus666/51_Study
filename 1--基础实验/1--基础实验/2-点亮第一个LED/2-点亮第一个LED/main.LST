@@ -1,0 +1,57 @@
+C51 COMPILER V9.01   MAIN                                                                  05/04/2024 23:31:31 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\KEILC51\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /**************************************************************************************
+   2          深圳市普中科技有限公司（PRECHIN 普中）
+   3          技术支持：www.prechin.net
+   4          
+   5          实验名称：点亮第一个LED
+   6          接线说明：      
+   7          实验现象：下载程序后“LED模块”的D1指示灯点亮
+   8          注意事项：                                                                                                                                                                
+   9          ***************************************************************************************/
+  10          #include "reg52.h"
+  11          
+  12          // sbit LED1=P2^7;      //将P2.0管脚定义为LED1
+  13          sbit LED1=P2^6;
+  14          
+  15          /*******************************************************************************
+  16          * 函 数 名       : main
+  17          * 函数功能               : 主函数
+  18          * 输    入       : 无
+  19          * 输    出       : 无
+  20          *******************************************************************************/
+  21          void delay(int ten) {
+  22   1              while(ten--);
+  23   1      }
+  24          
+  25          void main()
+  26          {
+  27   1              while(1)
+  28   1              {
+  29   2                      LED1=0;
+  30   2                      delay(50000);
+  31   2                      LED1=1;
+  32   2                      delay(50000);
+  33   2              }
+  34   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     31    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
